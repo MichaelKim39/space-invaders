@@ -11,7 +11,6 @@ export default function App() {
 
   return (
     <GestureHandlerRootView style={styles.container}>
-      <Invader />
       <InvaderGrid />
       <Player />
     </GestureHandlerRootView>
