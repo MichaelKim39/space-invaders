@@ -7,11 +7,6 @@ type InvaderProps = {
 };
 
 export const Invader = ({ col, row }: InvaderProps) => {
-  // console.log(
-  //   Math.floor(INVADER_WIDTH * col),
-  //   Math.floor(INVADER_HEIGHT * row)
-  // );
-
   return (
     !Number.isNaN(INVADER_HEIGHT) &&
     !Number.isNaN(INVADER_WIDTH) && (

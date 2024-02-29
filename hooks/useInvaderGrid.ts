@@ -1,13 +1,10 @@
-import { INVADERS_PER_ROW, INVADER_NUM_ROWS } from "@/constants";
+import { INITIAL_INVADERS_GRID } from "@/constants";
 import { useState } from "react";
 
 export const useInvaderGrid = () => {
+  console.log(INITIAL_INVADERS_GRID);
   // Grid represented by 2D array of booleans (true implies invader exists)
-  const [invaderGrid, setInvaderGrid] = useState(
-    Array.from({ length: INVADER_NUM_ROWS }).map(() =>
-      Array.from({ length: INVADERS_PER_ROW }).fill(true)
-    )
-  );
+  const [invaderGrid, setInvaderGrid] = useState(INITIAL_INVADERS_GRID);
 
   return { invaderGrid, setInvaderGrid };
 };
