@@ -1,0 +1,1 @@
+export { InvaderRow } from "./InvaderRow";

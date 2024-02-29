@@ -1,0 +1,1 @@
+export { InvaderGrid } from "./InvaderGrid";

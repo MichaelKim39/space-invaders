@@ -7,7 +7,7 @@ export const useGame = () => {
   useEffect(() => {
     if (isGameRunning) {
       const frameInterval = setInterval(() => {
-        console.log("FRAME");
+        // console.log("FRAME");
       }, FRAME_INTERVAL);
       return () => clearInterval(frameInterval);
     }

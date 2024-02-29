@@ -1,22 +1,18 @@
-import { SafeAreaView, StyleSheet } from "react-native";
-import { useGame } from "./hooks/useGame";
-import { Player } from "./components/Player";
+import { StyleSheet } from "react-native";
 import React from "react";
-import {
-  Gesture,
-  GestureDetector,
-  GestureHandlerRootView,
-} from "react-native-gesture-handler";
-import Animated, {
-  useAnimatedStyle,
-  useSharedValue,
-} from "react-native-reanimated";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { useGame } from "@/hooks/useGame";
+import { Player } from "@/components/Player";
+import { Invader } from "@/components/Invader";
+import { InvaderGrid } from "./components/InvaderGrid";
 
 export default function App() {
   const { isGameRunning, setGameRunning } = useGame();
 
   return (
     <GestureHandlerRootView style={styles.container}>
+      <Invader />
+      <InvaderGrid />
       <Player />
     </GestureHandlerRootView>
   );

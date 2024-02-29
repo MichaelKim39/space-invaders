@@ -1,6 +1,13 @@
-import { getXPosFromPercentage } from "./utils/position";
+import { getXPosFromPercentage } from "@/utils/position";
+import { Dimensions } from "react-native";
+
+const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
 
 export const FRAME_INTERVAL = 500;
 
 export const PLAYER_WIDTH = 80;
-export const PLAYER_INITIAL_POS = getXPosFromPercentage(50) - PLAYER_WIDTH / 2;
+export const PLAYER_START_POS = getXPosFromPercentage(50) - PLAYER_WIDTH / 2;
+
+export const INVADERS_PER_ROW = 5;
+export const INVADER_NUM_ROWS = 5;
+export const INVADER_WIDTH = windowWidth / INVADERS_PER_ROW;
