@@ -3,14 +3,23 @@ import React from "react";
 import { useInvaderGrid } from "@/hooks/useInvaderGrid";
 import { Invader } from "@/components/Invader/";
 
-export const InvaderGrid = () => {
-  const { invaderGrid, setInvaderGrid } = useInvaderGrid();
+type InvaderGridProps = {
+  invaderGrid: boolean[][];
+};
 
+export const InvaderGrid = ({ invaderGrid }: InvaderGridProps) => {
   return (
     <View>
       {invaderGrid.map((invaderRow, row) => {
-        return invaderRow.map(
-          (invader, col) => invader && <Invader col={col} row={row} />
+        return (
+          <View key={`invader-row-${row}`}>
+            {invaderRow.map(
+              (invader, col) =>
+                invader && (
+                  <Invader col={col} row={row} key={`invader-col-${col}`} />
+                )
+            )}
+          </View>
         );
       })}
     </View>
