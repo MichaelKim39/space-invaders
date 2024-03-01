@@ -8,9 +8,9 @@ export const InvaderGrid = () => {
 
   return (
     <View>
-      {invaderGrid.map((invaderRow, col) => {
+      {invaderGrid.map((invaderRow, row) => {
         return invaderRow.map(
-          (invader, row) => invader && <Invader col={col} row={row} />
+          (invader, col) => invader && <Invader col={col} row={row} />
         );
       })}
     </View>
